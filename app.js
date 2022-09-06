@@ -6,13 +6,14 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+const today = new Date()
 const favoriteMovieList = ["Star Wars", "The Avengers"]
 const moviesString = favoriteMovieList.join()
 
 // define the default server route (aka "/") for our server
 
 app.get('/', (req, res) => {
-  res.send('Patrick Vickerman' + ' Today is September 6 2022')
+  res.send('Patrick Vickerman ' + today)
 })
 
 app.get('/list-movies', (req, res) => {
